@@ -17,7 +17,6 @@
 <body>
 <script type="text/javascript">
 function onLinkedInLoad() {
-  console.log(uno)
   IN.Event.on(IN, "auth", function() {onLinkedInLogin();});
   IN.Event.on(IN, "logout", function() {onLinkedInLogout();});
 }
