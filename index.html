@@ -17,6 +17,7 @@
 <body>
 <script type="text/javascript">
 function onLinkedInLoad() {
+  console.log(uno)
   IN.Event.on(IN, "auth", function() {onLinkedInLogin();});
   IN.Event.on(IN, "logout", function() {onLinkedInLogout();});
 }
@@ -34,6 +35,7 @@ function onLinkedInLogin() {
 }
 
 function setConnections(connections) {
+  console.log(dos)
   var connHTML = "<ul>";
   for (id in connections) {
     connHTML = connHTML + "<li><a href=\"" + connections[id].publicProfileUrl + "\">";
