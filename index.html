@@ -17,7 +17,7 @@
 <body>
 <script type="text/javascript">
 function onLinkedInLoad() {
-  IN.Event.on(IN, "auth", function() {onLinkedInLoad();});
+  IN.Event.on(IN, "auth", function() {onLinkedInLogin();});
   IN.Event.on(IN, "logout", function() {onLinkedInLogout();});
 }
 
@@ -25,7 +25,7 @@ function onLinkedInLogout() {
   setConnections({}, {total:0});
 }
 
-function onLinkedInlogin() {
+function onLinkedInLogin() {
   IN.API.Connections("me")
   .fields("id", "firstName", "lastName", "pictureUrl", "publicProfileUrl")
   .result(function(result, metadata) {
